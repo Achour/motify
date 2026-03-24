@@ -1,5 +1,6 @@
 import { HeadContent, Outlet, Scripts, createRootRoute, Link } from '@tanstack/react-router'
 import { Sparkles, LayoutGrid, SlidersHorizontal } from 'lucide-react'
+import { Analytics } from '@vercel/analytics/react'
 
 import appCss from '../styles.css?url'
 
@@ -26,6 +27,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="min-h-screen font-sans antialiased">
         {children}
+        <Analytics />
         <Scripts />
       </body>
     </html>
