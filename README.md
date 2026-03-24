@@ -57,4 +57,4 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## License
 
-Open source — see the repository for license details.
+Open source
