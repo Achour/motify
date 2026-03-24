@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/react'
 
 import appCss from '../styles.css?url'
 
-const siteUrl = 'https://motify.vercel.app'
+const siteUrl = 'https://motify.achour.dev'
 const siteTitle = 'Motify - Background Pattern Generator'
 const siteDescription =
   'Design beautiful CSS background patterns with Motify. Pick a preset, tweak it live, and export clean CSS or Tailwind code.'
