@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { PresetGrid } from '#/components/gallery/preset-grid'
-import { Sparkles } from 'lucide-react'
+import { Sparkles, SlidersHorizontal } from 'lucide-react'
 import { Button } from '#/components/ui/button'
 
 export const Route = createFileRoute('/')({ component: GalleryPage })
@@ -20,6 +20,7 @@ function GalleryPage() {
           Pick a preset, tweak it live, and export clean CSS or Tailwind code. Your visual mixing board for background patterns.
         </p>
         <Button variant="secondary" size="lg" render={<Link to="/editor" className="no-underline" />}>
+          <SlidersHorizontal className="h-4 w-4" />
           Open Sandbox
         </Button>
       </section>

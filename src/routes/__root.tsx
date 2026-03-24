@@ -1,5 +1,5 @@
 import { HeadContent, Outlet, Scripts, createRootRoute, Link } from '@tanstack/react-router'
-import { Sparkles } from 'lucide-react'
+import { Sparkles, LayoutGrid, SlidersHorizontal } from 'lucide-react'
 
 import appCss from '../styles.css?url'
 
@@ -44,14 +44,16 @@ function RootLayout() {
           <nav className="flex items-center gap-6">
             <Link
               to="/"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline [&.active]:text-foreground"
+              className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors no-underline [&.active]:text-foreground"
             >
+              <LayoutGrid className="h-4 w-4" />
               Gallery
             </Link>
             <Link
               to="/editor"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors no-underline [&.active]:text-foreground"
+              className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors no-underline [&.active]:text-foreground"
             >
+              <SlidersHorizontal className="h-4 w-4" />
               Editor
             </Link>
           </nav>
