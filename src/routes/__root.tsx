@@ -4,15 +4,41 @@ import { Analytics } from '@vercel/analytics/react'
 
 import appCss from '../styles.css?url'
 
+const siteUrl = 'https://motify.vercel.app'
+const siteTitle = 'Motify — Background Pattern Generator'
+const siteDescription =
+  'Design beautiful CSS background patterns with Motify. Pick a preset, tweak it live, and export clean CSS or Tailwind code.'
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'Motify — Background Pattern Generator' },
+      { title: siteTitle },
+      { name: 'description', content: siteDescription },
+      { name: 'theme-color', content: '#0a0a0b' },
+      { name: 'robots', content: 'index, follow' },
+      // Open Graph
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: siteUrl },
+      { property: 'og:title', content: siteTitle },
+      { property: 'og:description', content: siteDescription },
+      { property: 'og:site_name', content: 'Motify' },
+      { property: 'og:image', content: `${siteUrl}/og-image.png` },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: siteTitle },
+      { name: 'twitter:description', content: siteDescription },
+      { name: 'twitter:image', content: `${siteUrl}/og-image.png` },
     ],
     links: [
       { rel: 'stylesheet', href: appCss },
+      { rel: 'canonical', href: siteUrl },
+      { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
+      { rel: 'apple-touch-icon', href: '/logo192.png' },
+      { rel: 'manifest', href: '/manifest.json' },
     ],
   }),
   component: RootLayout,
@@ -43,7 +69,7 @@ function RootLayout() {
             <Sparkles className="h-5 w-5 text-purple-400" />
             <span className="font-bold text-lg tracking-tight">Motify</span>
           </Link>
-          <nav className="flex items-center gap-6">
+          <nav aria-label="Main navigation" className="flex items-center gap-6">
             <Link
               to="/"
               className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors no-underline [&.active]:text-foreground"

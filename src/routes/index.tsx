@@ -3,7 +3,19 @@ import { PresetGrid } from '#/components/gallery/preset-grid'
 import { Sparkles, SlidersHorizontal } from 'lucide-react'
 import { Button } from '#/components/ui/button'
 
-export const Route = createFileRoute('/')({ component: GalleryPage })
+export const Route = createFileRoute('/')({
+  head: () => ({
+    meta: [
+      { title: 'Motify — Background Pattern Generator' },
+      {
+        name: 'description',
+        content:
+          'Browse and customize beautiful CSS background patterns. Pick a preset, tweak colors and parameters live, then export clean CSS or Tailwind code.',
+      },
+    ],
+  }),
+  component: GalleryPage,
+})
 
 function GalleryPage() {
   return (

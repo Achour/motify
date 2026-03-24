@@ -11,6 +11,16 @@ export const Route = createFileRoute("/editor")({
   validateSearch: (search: Record<string, unknown>): EditorSearch => ({
     preset: typeof search.preset === "string" ? search.preset : undefined,
   }),
+  head: () => ({
+    meta: [
+      { title: 'Editor — Motify' },
+      {
+        name: 'description',
+        content:
+          'Create and customize CSS background patterns in real time. Adjust colors, opacity, spacing, and more, then export as CSS or Tailwind code.',
+      },
+    ],
+  }),
   component: EditorPage,
 })
 
