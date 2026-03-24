@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0a0a0b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <!-- grid pattern for subtle background texture -->
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#a855f7" stroke-opacity="0.12" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <!-- rounded square background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <!-- grid texture overlay -->
+  <rect width="512" height="512" rx="96" fill="url(#grid)"/>
+  <!-- letter M -->
+  <text x="256" y="340" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="800" font-size="320" fill="url(#accent)">M</text>
+  <!-- sparkle dot top-right -->
+  <circle cx="400" cy="112" r="18" fill="#c084fc" opacity="0.9"/>
+  <circle cx="400" cy="112" r="8" fill="#e9d5ff"/>
+</svg>
